@@ -1,1 +1,96 @@
+{
+  "component": "Aircraft Wing",
+  "primary_function": "Generate lift to support the aircraft in flight",
+  
+  "geometry": {
+    "wingspan": "variable (e.g., 10m - 80m depending on aircraft)",
+    "aspect_ratio": "ratio of wingspan squared to wing area",
+    "sweep_angle": "angle of wing relative to perpendicular axis",
+    "dihedral_angle": "upward angle of wings for stability",
+    "taper_ratio": "ratio of tip chord to root chord",
+    "airfoil_type": "e.g., NACA series or custom airfoil"
+  },
 
+  "structural_components": {
+    "spar": {
+      "description": "Primary load-bearing beam running spanwise",
+      "types": ["main spar", "rear spar"],
+      "function": "Carries bending loads and transfers forces to fuselage"
+    },
+    "ribs": {
+      "description": "Transverse structures shaping the airfoil",
+      "function": "Maintain aerodynamic profile and distribute loads"
+    },
+    "skin": {
+      "description": "Outer surface of the wing",
+      "function": "Carries shear loads and contributes to overall stiffness"
+    },
+    "stringers": {
+      "description": "Longitudinal reinforcements",
+      "function": "Prevent buckling and increase structural rigidity"
+    }
+  },
+
+  "control_surfaces": {
+    "aileron": {
+      "location": "outer trailing edge",
+      "function": "Controls roll"
+    },
+    "flaps": {
+      "location": "inner trailing edge",
+      "function": "Increase lift during takeoff and landing"
+    },
+    "slats": {
+      "location": "leading edge",
+      "function": "Improve lift at low speeds"
+    },
+    "spoilers": {
+      "location": "upper wing surface",
+      "function": "Reduce lift and increase drag"
+    }
+  },
+
+  "materials": {
+    "common": [
+      "Aluminum alloys",
+      "Carbon fiber composites",
+      "Titanium (high-stress areas)"
+    ],
+    "selection_criteria": [
+      "Strength-to-weight ratio",
+      "Fatigue resistance",
+      "Corrosion resistance",
+      "Manufacturability"
+    ]
+  },
+
+  "loads_and_forces": {
+    "lift": "Upward aerodynamic force",
+    "drag": "Resistance force opposing motion",
+    "weight": "Downward force from structure and fuel",
+    "bending_moment": "Maximum at wing root",
+    "torsion": "Twisting forces due to aerodynamic loads"
+  },
+
+  "fuel_storage": {
+    "location": "integrated within wing structure (wet wing)",
+    "function": "Stores fuel to optimize weight distribution"
+  },
+
+  "design_considerations": [
+    "Weight vs strength optimization",
+    "Aeroelastic effects (flutter, divergence)",
+    "Fatigue life and damage tolerance",
+    "Manufacturing complexity",
+    "Maintenance accessibility",
+    "Regulatory compliance"
+  ],
+
+  "failure_modes": [
+    "Fatigue cracking",
+    "Buckling of skin or stringers",
+    "Delamination (composites)",
+    "Corrosion damage",
+    "Flutter-induced structural failure"
+  ]
+}
